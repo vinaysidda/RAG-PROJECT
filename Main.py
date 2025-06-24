@@ -12,7 +12,7 @@ from langchain.chains import RetrievalQA
 import os
 
 # 🔐 Set your OpenAI API key securely
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "your key"
 
 # 🧾 Load your PDF
 loader = PyPDFLoader("800xa.pdf")
