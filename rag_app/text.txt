@@ -1,0 +1,1 @@
+"I’m a software engineer with experience in AI-driven systems, recently building a production-ready RAG application and applying NLP to cybersecurity — now looking to apply my Python, data, and LLM skills to help Keytag.ai build intelligent agents for the pharmaceutical industry." 

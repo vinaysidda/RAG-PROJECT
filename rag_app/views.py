@@ -13,6 +13,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.conf import settings 
 import json
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+import json
+
 
 
 
@@ -29,6 +33,15 @@ def upload_view(request):
             return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
 
     return JsonResponse({'status': 'error', 'message': 'Only POST method is allowed.'}, status=405)
+
+
+
+# @csrf_exempt
+# def upload_view(request):
+#     # ▶️ Log at the very start
+#     print("▶️ upload_view fired! Method:", request.method)
+#     # Short-circuit and return immediately
+#     return JsonResponse({'status':'hit!'}, status=200)
 
 @csrf_exempt
 def query_view(request):
