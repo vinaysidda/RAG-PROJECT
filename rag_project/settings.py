@@ -11,9 +11,22 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+import openai
+import sys
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# # load_dotenv(override=True)  # Loads variables from .env
+load_dotenv(dotenv_path=BASE_DIR / ".env", override=True)
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# OPENAI_API_KEY ="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" 
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -46,6 +59,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -128,11 +142,5 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-from dotenv import load_dotenv
-import os
-import openai
 
-load_dotenv()  # Loads variables from .env
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 

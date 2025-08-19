@@ -1,0 +1,17 @@
+Step 1 :- git init -- Initialize a brand-new repo:
+step 2 :- git checkout -b main Switch to (or create) your main branch:
+step 3 :- There is a need for .gitignore  
+        for example do add this     .env
+                                    KEY.txt
+step 4 :- git add .
+step 5 :- git commit -m "Initial commit (excluding .env and KEY.txt)"
+
+step 6:- git remote add origin https://github.com/vinaysidda/RAG-PROJECT.git
+step 7 :- git push -u origin main
+
+
+                                    
+
+ 
+
+
